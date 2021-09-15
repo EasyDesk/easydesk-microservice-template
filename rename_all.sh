@@ -17,12 +17,12 @@ find . -type d -path '*/.git' -prune -o \
   -print | sort -r | while read FILE_NAME
 do
   PATTERN='s/___MICROSERVICE_NAME___/'"$MICROSERVICE_NAME"'/g'
-  NEW_FILE_NAME=.tmp/`echo "$FILE_NAME" | sed -e "$PATTERN"`
-  mkdir -p `dirname "$NEW_FILE_NAME"`
-  mv "$FILE_NAME" "$NEW_FILE_NAME"
-  if [[ -f "$NEW_FILE_NAME" ]] ; then
+  if [[ -f "$FILE_NAME" ]] ; then
+    NEW_FILE_NAME=`echo "$FILE_NAME" | sed -e "$PATTERN"`
+    mkdir -p `dirname "$NEW_FILE_NAME"`
+    mv "$FILE_NAME" "$NEW_FILE_NAME"
     sed -i "$PATTERN" "$NEW_FILE_NAME"
+  else
+    rmdir "$FILE_NAME"
   fi
 done
-
-mv 
