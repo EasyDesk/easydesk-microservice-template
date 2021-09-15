@@ -23,6 +23,6 @@ do
     mv "$FILE_NAME" "$NEW_FILE_NAME"
     sed -i "$PATTERN" "$NEW_FILE_NAME"
   else
-    rmdir "$FILE_NAME"
+    rmdir "$FILE_NAME" &> /dev/null || true
   fi
 done
