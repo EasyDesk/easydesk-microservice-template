@@ -13,8 +13,4 @@
     <ProjectReference Include="..\___MICROSERVICE_NAME___.Domain\___MICROSERVICE_NAME___.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="DataAccess\" />
-  </ItemGroup>
-
 </Project>

@@ -23,11 +23,4 @@
     <ProjectReference Include="..\..\src\___MICROSERVICE_NAME___.Web\___MICROSERVICE_NAME___.Web.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Domain\" />
-    <Folder Include="Application\" />
-    <Folder Include="Infrastructure\" />
-    <Folder Include="Web\" />
-  </ItemGroup>
-
 </Project>

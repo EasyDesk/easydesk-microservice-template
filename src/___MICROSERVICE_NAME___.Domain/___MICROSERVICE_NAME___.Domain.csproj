@@ -8,9 +8,4 @@
     <PackageReference Include="EasyDesk.CleanArchitecture.Domain" Version="0.12.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Aggregates\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
-
 </Project>
