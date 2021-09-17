@@ -1,0 +1,16 @@
+<Project>
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>$(SolutionDir)\StyleCopRuleSet.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="$(SolutionDir)\.stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+</Project>
