@@ -34,6 +34,7 @@ jobs:
           unit-tests-project: ${{ env.UNIT_TESTS_PROJECT }}
           output-dir: ${{ env.OUTPUT_DIR }}/app
           sql-file-name: ${{ env.OUTPUT_DIR }}/update-database.sql
+          warnings-as-errors: true
       - uses: actions/upload-artifact@v2
         with:
           name: build-artifacts
@@ -99,7 +100,7 @@ jobs:
           db-server-name: ${{ secrets.UA_DB_SERVER }}
           db-connection-string: ${{ secrets.UA_CONNECTION_STRING }}
   deploy-to-production:
-    name: Deploy to User Acceptance environment
+    name: Deploy to User Producion environment
     runs-on: windows-2019
     needs: [build, deploy-to-ua]
     concurrency: deploy-production
