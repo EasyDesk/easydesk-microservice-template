@@ -5,7 +5,7 @@ env:
   MAIN_PROJECT: src/___MICROSERVICE_NAME___.Web
   UNIT_TESTS_PROJECT: test/___MICROSERVICE_NAME___.UnitTests
   OUTPUT_DIR: out
-  AZURE_APP_SERVICE_NAME: ""
+  AZURE_APP_SERVICE_NAME: ''
 
 on:
   workflow_dispatch:
@@ -34,7 +34,7 @@ jobs:
           unit-tests-project: ${{ env.UNIT_TESTS_PROJECT }}
           output-dir: ${{ env.OUTPUT_DIR }}/app
           sql-file-name: ${{ env.OUTPUT_DIR }}/update-database.sql
-          warnings-as-errors: false
+          warnings-as-errors: true
       - uses: actions/upload-artifact@v2
         with:
           name: build-artifacts
@@ -75,10 +75,10 @@ jobs:
         uses: EasyDesk/action-semver-release@v1
         with:
           version: ${{ needs.build.outputs.version }}
-          is-prerelease: ${{ needs.build.outputs.is-github-prerelease }}
+          is-prerelease: ${{ needs.build.outputs.is-prerelease }}
           files: |
             update-database.sql
-            app/**
+            assets.zip
   deploy-to-ua:
     name: Deploy to User Acceptance environment
     runs-on: windows-2019
