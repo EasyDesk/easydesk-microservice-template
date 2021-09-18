@@ -100,7 +100,7 @@ jobs:
           db-server-name: ${{ secrets.UA_DB_SERVER }}
           db-connection-string: ${{ secrets.UA_CONNECTION_STRING }}
   deploy-to-production:
-    name: Deploy to User Producion environment
+    name: Deploy to Producion environment
     runs-on: windows-2019
     needs: [build, deploy-to-ua]
     concurrency: deploy-production
