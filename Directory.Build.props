@@ -6,10 +6,6 @@
     </PackageReference>
   </ItemGroup>
 
-  <PropertyGroup>
-    <CodeAnalysisRuleSet>$(SolutionDir)\StyleCopRuleSet.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-
   <ItemGroup>
     <AdditionalFiles Include="$(SolutionDir)\.stylecop.json" Link="stylecop.json" />
   </ItemGroup>
