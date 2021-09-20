@@ -75,7 +75,7 @@ jobs:
         uses: EasyDesk/action-semver-release@v1
         with:
           version: ${{ needs.build.outputs.version }}
-          is-prerelease: ${{ needs.build.outputs.is-prerelease }}
+          prerelease: ${{ needs.build.outputs.is-prerelease }}
           files: |
             update-database.sql
             assets.zip
