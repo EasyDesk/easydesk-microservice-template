@@ -20,4 +20,8 @@
     <ProjectReference Include="..\___MICROSERVICE_NAME___.Infrastructure\___MICROSERVICE_NAME___.Infrastructure.csproj" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <RootFolder>..\..</RootFolder>
+  </PropertyGroup>
+
 </Project>

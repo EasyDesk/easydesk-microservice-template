@@ -12,4 +12,8 @@
     <ProjectReference Include="..\___MICROSERVICE_NAME___.Domain\___MICROSERVICE_NAME___.Domain.csproj" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <RootFolder>..\..</RootFolder>
+  </PropertyGroup>
+
 </Project>

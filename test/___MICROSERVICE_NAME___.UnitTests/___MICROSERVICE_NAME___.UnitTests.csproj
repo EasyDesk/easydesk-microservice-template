@@ -23,4 +23,8 @@
     <ProjectReference Include="..\..\src\___MICROSERVICE_NAME___.Web\___MICROSERVICE_NAME___.Web.csproj" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <RootFolder>..\..</RootFolder>
+  </PropertyGroup>
+
 </Project>
