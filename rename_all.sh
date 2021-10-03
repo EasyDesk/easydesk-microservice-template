@@ -26,3 +26,5 @@ do
     rmdir "$FILE_NAME" &> /dev/null || true
   fi
 done
+
+rm "$0" # self-delete
