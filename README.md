@@ -8,4 +8,4 @@ Template project for a .NET C# microservice based on the Clean Architecture and 
 4. Open the solution with Visual Studio and start coding
 
 ### Example
-TODO: link
+You can look at the [Hello World Service](https://github.com/EasyDesk/easydesk-hello-world-service).
