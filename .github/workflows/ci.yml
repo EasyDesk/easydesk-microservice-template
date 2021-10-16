@@ -41,7 +41,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: build-artifacts
-          path: out
+          path: ${{ env.OUTPUT_DIR }}
   deploy-to-test:
     name: Deploy to test environment
     runs-on: windows-2019
