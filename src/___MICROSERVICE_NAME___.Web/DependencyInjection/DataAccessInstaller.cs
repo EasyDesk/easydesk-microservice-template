@@ -6,8 +6,12 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace ___MICROSERVICE_NAME___.Web.DependencyInjection
 {
+    /// <summary>
+    /// An installer containing dependency injection configuration for the data access layer.
+    /// </summary>
     public class DataAccessInstaller : IServiceInstaller
     {
+        /// <inheritdoc/>
         public void InstallServices(IServiceCollection services, IConfiguration configuration, IWebHostEnvironment environment)
         {
             services.AddEfCoreDataAccess(configuration.GetConnectionString("MainDb"), options =>
