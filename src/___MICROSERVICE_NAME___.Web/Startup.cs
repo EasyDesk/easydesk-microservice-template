@@ -1,8 +1,6 @@
 using ___MICROSERVICE_NAME___.Application;
 using ___MICROSERVICE_NAME___.Infrastructure;
-using EasyDesk.CleanArchitecture.Application.Data.DependencyInjection;
-using EasyDesk.CleanArchitecture.Application.Events.DependencyInjection;
-using EasyDesk.CleanArchitecture.Web;
+using EasyDesk.CleanArchitecture.Application.Modules;
 using EasyDesk.CleanArchitecture.Web.Startup;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -32,15 +30,8 @@ public class Startup : BaseStartup
 
     protected override string ServiceName => "___MICROSERVICE_NAME___";
 
-    protected override IDataAccessImplementation DataAccessImplementation => throw new NotImplementedException();
-
-    protected override bool UsesPublisher => false;
-
-    protected override bool UsesConsumer => false;
-
-    protected override IEventBusImplementation EventBusImplementation => throw new NotImplementedException();
-
-    protected override bool IsMultitenant => false;
-
-    protected override bool UsesSwagger => false;
+    public override void ConfigureApp(AppBuilder builder)
+    {
+        throw new NotImplementedException();
+    }
 }
